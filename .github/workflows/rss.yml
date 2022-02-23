@@ -15,7 +15,7 @@ jobs:
     strategy:
       # Node versions list
       matrix:
-        node-version: [13.x]
+        node-version: [13.x, 14.x]
 
     steps:
       # Check-out repository under GitHub workspace
@@ -30,12 +30,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm install, build
-        # Install and build project
-        run: |
-          make install
-          make build
-        # Add environment variables
+      - name: Install dependencies
+        run: npm install
+        
         env:
           CI: true
 
@@ -44,3 +41,6 @@ jobs:
 
       - name: Run tests
         run: make test
+        
+      - name: Build
+        run: npm run build
