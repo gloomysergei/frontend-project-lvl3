@@ -1,11 +1,23 @@
 /* eslint-disable global-require */
 /* eslint-disable object-shorthand */
 /* eslint-disable func-names */
+
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval-source-map',
   mode: process.env.NODE_ENV || 'development',
+  entry: './src/index.js',
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   module: {
     rules: [
       {
@@ -20,25 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
-      {
-        test: /\.(scss)$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugin: function () {
-                  return [require('autoprefixer')];
-                },
-              },
-            },
-          },
-          { loader: 'sass-loader' },
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -49,9 +43,6 @@ module.exports = {
         use: 'file-loader',
       },
     ],
-  },
-  devServer: {
-    port: 5501,
   },
   plugins: [
     new HtmlWebpackPlugin({
