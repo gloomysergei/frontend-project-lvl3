@@ -10,23 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! yup */ \"./node_modules/yup/es/index.js\");\n/* harmony import */ var on_change__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! on-change */ \"./node_modules/on-change/index.js\");\n/* harmony import */ var _view_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view.js */ \"./src/view.js\");\n\n\n\nvar schema = yup__WEBPACK_IMPORTED_MODULE_0__.object().shape({\n  name: yup__WEBPACK_IMPORTED_MODULE_0__.string().email().required()\n});\n\nvar app = function app() {\n  var elements = {\n    form: document.querySelector('.rss-form'),\n    input: document.getElementById('url-input'),\n    button: document.getElementById('rss-submit'),\n    feeds: document.querySelector('.feeds'),\n    feedback: document.querySelector('.feedback')\n  };\n  var state = {\n    form: {\n      processState: '',\n      errors: [],\n      submitEvent: 0\n    },\n    task: []\n  };\n  var watchState = (0,on_change__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(state, (0,_view_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(elements));\n  elements.form.addEventListener('submit', function (evt) {\n    evt.preventDefault();\n    var formData = new FormData(evt.target);\n    console.log(formData.get('name'));\n    var itemTask = {\n      name: formData.get('name')\n    };\n    schema.validate(itemTask).then(function (value) {\n      watchState.task.unshift(value);\n      watchState.form.processState = 'sending';\n      watchState.form.processState = 'sent';\n    })[\"catch\"](function (err) {\n      watchState.form.errors = err.errors;\n    });\n  });\n  elements.input.addEventListener('focusin', function () {\n    watchState.form.submitEvent += 1;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (app);\n\n//# sourceURL=webpack://@hexlet/code/./src/app.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _stules_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stules/style.css */ \"./src/stules/style.css\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _init_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./init.js */ \"./src/init.js\");\n\n\n\n\n(0,_init_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://@hexlet/code/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _stules_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stules/style.css */ \"./src/stules/style.css\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.js */ \"./src/app.js\");\n\n\n\n\n(0,_app_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://@hexlet/code/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/init.js":
+/***/ "./src/view.js":
 /*!*********************!*\
-  !*** ./src/init.js ***!
+  !*** ./src/view.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {\n  console.log('Hello, Sergei');\n});\n\n//# sourceURL=webpack://@hexlet/code/./src/init.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n/* eslint-disable no-param-reassign */\nvar renderErrors = function renderErrors(elements, errors) {\n  var _errors = _slicedToArray(errors, 1),\n      error = _errors[0]; // берем только первую ошибку\n\n\n  elements.input.classList.add('is-invalid');\n\n  if (document.querySelector('.invalid-feedback')) {\n    elements.input.nextElementSibling.remove();\n  }\n\n  var feedbackElement = document.createElement('div');\n  feedbackElement.classList.add('invalid-feedback');\n  feedbackElement.textContent = error;\n  elements.input.after(feedbackElement);\n};\n\nvar renderTask = function renderTask(elements, value) {\n  var _elements$todos;\n\n  var taskElements = value.map(function (item) {\n    var el = document.createElement('li');\n    console.log(item.name);\n    el.textContent = item.name;\n    return el;\n  });\n\n  (_elements$todos = elements.todos).replaceChildren.apply(_elements$todos, _toConsumableArray(taskElements));\n};\n\nvar handleProcessState = function handleProcessState(elements, processState) {\n  switch (processState) {\n    case 'filling':\n      elements.form.reset();\n      elements.input.classList.remove('is-invalid');\n      elements.button.disabled = false;\n      elements.input.disabled = false;\n      break;\n\n    case 'sent':\n      elements.button.disabled = false; // разблокировка кнопки во время отправки формы\n\n      elements.input.disabled = false; // разблокировка полей формы во время отправки формы\n\n      break;\n    // case 'error': //  ошибка сети\n    //   elements.button.disabled = false;\n    //   break;\n\n    case 'sending':\n      elements.button.disabled = true; // блокировка кнопки во время отправки формы\n\n      elements.input.disabled = true; // блокировка полей формы во время отправки формы\n\n      break;\n\n    default:\n      // https://ru.hexlet.io/blog/posts/sovershennyy-kod-defolty-v-svitchah\n      throw new Error(\"Unknown process state: \".concat(processState));\n  }\n};\n\nvar render = function render(elements) {\n  return function (path, value) {\n    switch (path) {\n      case 'form.processState':\n        handleProcessState(elements, value);\n        break;\n\n      case 'form.errors':\n        renderErrors(elements, value);\n        break;\n\n      case 'task':\n        renderTask(elements, value);\n        break;\n\n      case 'form.submitEvent':\n        elements.form.reset();\n        elements.input.classList.remove('is-invalid');\n        break;\n\n      default:\n        break;\n    }\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (render);\n\n//# sourceURL=webpack://@hexlet/code/./src/view.js?");
 
 /***/ }),
 
@@ -225,12 +235,15 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
 /******/ 			id: moduleId,
-/******/ 			// no module.loaded needed
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -296,6 +309,18 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -309,6 +334,15 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -370,7 +404,7 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_bootstrap_dist_css_boots-bd9352"], () => (__webpack_require__("./src/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_bootstrap_dist_css_boots-ffc99a"], () => (__webpack_require__("./src/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

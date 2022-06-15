@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -56,6 +57,8 @@
     "@popperjs/core": "^2.11.2",
     "autoprefixer": "^10.4.2",
     "bootstrap": "^5.1.3",
-    "npm-check-updates": "^12.5.2"
+    "npm-check-updates": "^12.5.2",
+    "on-change": "^4.0.1",
+    "yup": "^0.32.11"
   }
 }
