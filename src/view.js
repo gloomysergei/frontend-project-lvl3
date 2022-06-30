@@ -1,4 +1,13 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable no-param-reassign */
+
+const renderInitial = (elements, i18nextInstance) => {
+  Object.entries(elements.initial).map((item) => {
+    const [key, valueElement] = item;
+    valueElement.textContent = i18nextInstance.t(`${key}`);
+  });
+};
+
 const renderErrors = (elements, errors) => {
   const [error] = errors;// берем только первую ошибку
   elements.input.classList.add('is-invalid');
@@ -42,7 +51,7 @@ const handleProcessState = (elements, processState) => {
   }
 };
 
-const render = (elements) => (path, value) => {
+const render = (elements, i18nextInstance) => (path, value) => {
   switch (path) {
     case 'form.processState':
       handleProcessState(elements, value);
@@ -60,6 +69,10 @@ const render = (elements) => (path, value) => {
       elements.form.reset();
       elements.input.classList.remove('is-invalid');
       elements.feedback.textContent = '';
+      break;
+
+    case 'init':
+      renderInitial(elements, i18nextInstance);
       break;
 
     default:
