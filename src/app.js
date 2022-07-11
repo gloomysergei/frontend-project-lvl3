@@ -66,7 +66,6 @@ const app = () => {
     //     watchState.form.processState = 'sent';
     //   })
     //   .catch((err) => {
-    //     console.log(err.errors);
     //     watchState.form.errors = err.errors;
     //   });
   });

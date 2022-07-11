@@ -18,12 +18,11 @@ const validate = (urlName, state) => {
   });
   schema.validate(urlName) // urlName - это объект  name: formData.get('url'),
     .then((value) => {
-      watchState.feeds.unshift(value.name);
+      watchState.feeds.unshift(value.name); // ---> запрос GET
       watchState.form.processState = 'sending';
       watchState.form.processState = 'sent';
     })
     .catch((err) => {
-      console.log(err.errors);
       watchState.form.errors = err.errors;
     });
 };
