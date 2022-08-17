@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Новые уроки на Хекслете</title>
+    <description>Практические уроки по программированию</description>
+    <link>https://ru.hexlet.io/</link>
+    <webMaster>info@hexlet.io</webMaster>
+    <item>
+      <title>Рекурсия / Основы алгоритмов и структур данных</title>
+      <guid isPermaLink="false">2836</guid>
+      <link>https://ru.hexlet.io/courses/js-basic-algorithms/lessons/recursion/theory_unit</link>
+      <description>Цель: Изучить, как работает рекурсия</description>
+      <pubDate>Fri, 15 Jul 2022 12:23:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>Итеративный процесс / JS: Функции</title>
+      <guid isPermaLink="false">2837</guid>
+      <link>https://ru.hexlet.io/courses/js-functions/lessons/iterative/theory_unit</link>
+      <description>Цель: Познакомимся с другим видом применения рекурсии, без откладывания вычислений до самого конца</description>
+      <pubDate>Thu, 14 Jul 2022 14:46:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Рекурсия / JS: Функции</title>
+      <guid isPermaLink="false">2833</guid>
+      <link>https://ru.hexlet.io/courses/js-functions/lessons/recursion/theory_unit</link>
+      <description>Цель: Разбираемся в одной из самых важных и интересных базовых концепций — рекурсии и рекурсивных вызовах.</description>
+      <pubDate>Thu, 14 Jul 2022 11:36:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>Способы определения массивов / Основы языка Ruby</title>
+      <guid isPermaLink="false">2832</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/arrays-definitions/theory_unit</link>
+      <description>Цель: Изучить новые способы определения массивов</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Массивы как множества / Основы языка Ruby</title>
+      <guid isPermaLink="false">2831</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/arrays-as-sets/theory_unit</link>
+      <description>Цель: Научиться работать с массивами как со множествами</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>each_with_object / Основы языка Ruby</title>
+      <guid isPermaLink="false">2830</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/each-with-object/theory_unit</link>
+      <description>Цель: Изучить полезный метод для агрегации данных</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Блоки внутри функции / Основы языка Ruby</title>
+      <guid isPermaLink="false">2829</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/functions-yield/theory_unit</link>
+      <description>Цель: Научиться писать свои функции, использующие блоки</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>Трансляция символов в блоки / Основы языка Ruby</title>
+      <guid isPermaLink="false">2828</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/functions-symbols-to-blocks/theory_unit</link>
+      <description>Цель: Научиться преобразовывать символы в блоки</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>Блоки как объекты / Основы языка Ruby</title>
+      <guid isPermaLink="false">2827</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/functions-blocks-as-objects/theory_unit</link>
+      <description>Цель: Изучить подробнее работу с блоками</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>Пайплайн / Основы языка Ruby</title>
+      <guid isPermaLink="false">2826</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/functions-pipeline/theory_unit</link>
+      <description>Цель: Научивать использовать пайплайн из функций</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Хеш как последний параметр функции / Основы языка Ruby</title>
+      <guid isPermaLink="false">2825</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/functions-object-as-last-argument/theory_unit</link>
+      <description>Цель: Научиться использовать хеш в качестве последнего параметра функции</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Упаковка аргументов функции / Основы языка Ruby</title>
+      <guid isPermaLink="false">2824</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/functions-definition-splat/theory_unit</link>
+      <description>Цель: Научиться применять Splat-оператор</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Деструктуризация / Основы языка Ruby</title>
+      <guid isPermaLink="false">2823</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/destructuring/theory_unit</link>
+      <description>Цель: Научиться раскладывать составные данные на элементы</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Методы хешей / Основы языка Ruby</title>
+      <guid isPermaLink="false">2822</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/hash-methods/theory_unit</link>
+      <description>Цель: Изучить подробнее методы хешей</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Хеши / Основы языка Ruby</title>
+      <guid isPermaLink="false">2821</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/hash-basics/theory_unit</link>
+      <description>Цель: Познакомиться с хешами в Ruby</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>Методы массивов / Основы языка Ruby</title>
+      <guid isPermaLink="false">2820</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/arrays-methods/theory_unit</link>
+      <description>Цель: Изучить подробнее полезные методы массивов</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>Массивы / Основы языка Ruby</title>
+      <guid isPermaLink="false">2819</guid>
+      <link>https://ru.hexlet.io/courses/ruby-basics/lessons/arrays-basics/theory_unit</link>
+      <description>Цель: Познакомиться с массивами в Ruby</description>
+      <pubDate>Wed, 13 Jul 2022 13:01:04 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

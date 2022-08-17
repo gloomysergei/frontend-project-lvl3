@@ -1,27 +1,23 @@
 import * as yup from 'yup';
 import { setLocale } from 'yup';
 
-const validate = (urlName, state) => {
+const validate = (urlName, i18nextInstance, state) => {
   const watchState = state;
   setLocale({
     mixed: {
-      required: 'Поле обязательно для заполнения',
-      notOneOf: 'RSS уже существует',
+      required: i18nextInstance.t('required'),
+      notOneOf: i18nextInstance.t('notOneOf'),
     },
     string: {
-      url: 'Ссылка должна быть валидным URL',
+      url: i18nextInstance.t('url'),
     },
   });
 
   const schema = yup.object().shape({
-    name: yup.string().url().required().notOneOf([watchState.feeds]),
+    name: yup.string().url().required().notOneOf([watchState.request]),
   });
   schema.validate(urlName) // urlName - это объект  name: formData.get('url'),
-    .then((value) => {
-      watchState.feeds.unshift(value.name); // ---> запрос GET
-      watchState.form.processState = 'sending';
-      watchState.form.processState = 'sent';
-    })
+    .then((value) => watchState.request.unshift(value.name))
     .catch((err) => {
       watchState.form.errors = err.errors;
     });
